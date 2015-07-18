@@ -7,7 +7,7 @@ After the first restart when Ubuntu has been installed on the virtual machine, i
 ```{bash}
 $git clone https://github.com/slentzen/UbuntuAutoinstall.git
 $cd UbuntuAutoinstall
-$sudo sh ./UbuntuAutoinstall
+$sudo sh ./UbuntuAutoinstall.sh
 ```
 NB: Script has only been developed for personal use, so use at your own risk, and only on a virtual machine where catastrophic failures can be tolerated.
 
