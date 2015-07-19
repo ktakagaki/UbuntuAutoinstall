@@ -7,8 +7,10 @@
 [LinkLabel](#Chroot-and-configure-the-base-system)  
 [LinkLabel](#Title)  
 
+<a name="Installation-of-Archlinux-on-Lenovo-Ideapad-S12"/>
 # Installation of Archlinux on Lenovo Ideapad S12 #
 
+<a name="Booting-the-installation-medium"/>
 ## Booting the installation medium ##
 - loadkyes dk-latin1
 - loadkeys uk
@@ -26,6 +28,7 @@
 - quit
 
 
+<a name="Partition-layout"/>
 ### Partition layout ###
 | sda 	| size     	| filetype 	| mount point 	|
 |-----	|----------	|----------	|-------------	|
@@ -53,11 +56,13 @@
 - **mount /dev/sda1 mnt/boot**
 
 
+<a name="Select-a-mirror"/>
 ### Select a mirror ###
 - nano /etc/pacman.d/mirrorlist
 - CTRL-K to cut and CTRL-U to paste
 - pacstrap -i /mnt base base-devel (Did not use the -i switch, this should cause pacstrap to install every package from the base group without prompting)
 
+<a name="Generate a fstab"/>
 ### Generate a fstab ###
 
 
@@ -74,4 +79,5 @@
 **Wifi drivers under /usr/lib/firmware on the Live environment must be explicetly installed to provide functionality after rebooting.**
 
 
+<a name="tinymce"/>
 ## Chroot and configure the base system ##
