@@ -47,13 +47,38 @@ Log in with the root credentials, changedir to ~/aui/ and execute ./lilo
 - **Systemd** yes
 - **Zram** yes
 - **Fontconfig** 1 Default. Ignore warnings and proceed with installation
-- 
+- CUPS, yes
+- __**Install Additional Firmware**__ On a Live machine, this is where it is possible to install **WiFi**
+- The AUI tutorial installs the *Cinnamon* Desktop Environment
+- LightDM display manage, **3**
+- After installing LightDM (option 3), tutorial enters "b" for Back|Skip to proceed to the next step of the installation
+- 1, Install Icon themes, 
+- 3, Numix Icons
+- no edit, yes proceed with install
+- I ~~Accidently edited Numix icon theme~~
+- **Multiple parts of the numix theme installation was edited by accident**
+- After installing the Numix theme, back at the "Gnome Icons" screen, select *b* to proceed to the next step
+- GTK Themes, 2
+- Numix, 2
+- b, for Back|Skip to the **Cinnamon Themes** screen, then enter *d* for "Done"
+- **Network Managers**
+- 1, Networkmanager
 
 
+#### Accessories Apps ####
+Currently nothing noteworthy to install, Conky of interest only later on
 
-#### Heading 4 ####
 
-#### Heading 5 ####
+#### Development Apps ####
+22 Sublime Text, 19 Oracle JDK, 7 Geany, 5 Eclipse,
 
-#### Heading 6 ####
+#### Remaining installation sections ####
+Generally not that many things of interest to install on the VirtualBox as I play the music, write my articles and other things on the host system.
+Section 9, Audio, remember to install the Codecs.
 
+**Web Servers > 4 LEPP, NGINX, POSTGRESQL & PHP**
+
+Eventually, all apps have been installed, remember to clean the orphaned packages and then quit and reboot the computer.
+
+
+#### <center><ins>Clean Orphan Packages (15) After finishing installing all the apps</ins></center> ####
