@@ -6,9 +6,6 @@
 [LinkLabel](#Generate-a-fstab)  
 [LinkLabel](#Chroot-and-configure-the-base-system)  
 [LinkLabel](#Title)  
-[LinkLabel](#Title)  
-[LinkLabel](#Title)  
-[LinkLabel](#Title)  
 
 # Installation of Archlinux on Lenovo Ideapad S12 #
 
@@ -39,7 +36,7 @@
 
 
 **It is unknown to me right now if I have to format the entire harddrive as fat32/vfat32 before partitioning as I have created a new GPT partition table with the #gdisk -o command. this may cause the installation to be unbootable after chrooting**. The wiki states
-> **Warning:** If a new UEFI system partition has been created on a UEFI/GPT system, it must be formatted with a fat32 or vfat32 file system. Failure to do so will result in an unbootable installation:
+> **Warning:** If a new UEFI system partition has been created on a UEFI/GPT system, it must be formatted with a fat32 or vfat32 file system. Failure to do so will result in an unbootable installation [Generate an fstab](https://wiki.archlinux.org/index.php/Beginners%27_guide#Generate_an_fstab)
 
 - lsblk /dev/sda
 - mkfs.vfat -F32 /dev/sda1
