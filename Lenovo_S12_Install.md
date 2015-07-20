@@ -1,11 +1,12 @@
 # TOC #
 * [Installation of Archlinux on Lenovo Ideapad S12](#Installation-of-Archlinux-on-Lenovo-Ideapad-S12)  
  * [Booting the installation medium](#Booting-the-installation-medium)  
- * [Partition layout](#Partition-layout)
- * [Select a mirrorl](#Select-a-mirror)  
- * [Generate a fstab](#Generate-a-fstab)  
+ 	* [Partition layout](#Partition-layout)
+ 	* [Select a mirror](#Select-a-mirror)  
+ 	* [Generate a fstab](#Generate-a-fstab)  
  * [Chroot and configure the base system](#Chroot-and-configure-the-base-system)  
-* [LinkLabel](#Title)  
+ 	* [Configure the network](#Configure-the-network)
+	* [Post-installation](#Post-installation)  
 
 
 <a name="Installation-of-Archlinux-on-Lenovo-Ideapad-S12"/>
@@ -66,12 +67,40 @@ Wifi drivers under /usr/lib/firmware on the Live environment must be explicetly 
 - pacstrap -i /mnt base base-devel (Did not use the -i switch, this should cause pacstrap to install every package from the base group without prompting)
 
 
-<a name="Generate-a-fstab"/>
-### Generate a fstab ###
+<a name="Generate-an-fstab"/>
+### Generate an fstab ###
 - genfstab -U -p /mnt >> /mnt/etc/fstab
 - cat /mnt/etc/fstab
 
 
-<a name="tinymce"/>
+<a name="Chroot-and-configure-the-base-system"/>
 ## Chroot and configure the base system ##
 - arch-chroot /mnt /bin/bash
+- nano /etc/locale.gen
+	- en_GB.UTF-8 UTF-8
+- locale-gen 
+- echo LANG=en_US.UTF-8 > /etc/locale.conf
+- export LANG=en_US.UTF-8
+- nano /etc/vconsole.conf
+	- KEYMAP=uk
+	- FONT=lat9w-16
+- ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+- hwclock --systohc --utc
+- echo LenS12 > /etc/hostname
+- nano /etc/hosts
+	- LenS12.example	LenS12
+	- LenS12.example	LenS12
+**Configure the network**
+
+
+
+
+<a name="Configure-the-network"/>
+### Configure the network ###
+
+
+
+
+
+<a name="Post-installation"/>
+### Post-installation ###
