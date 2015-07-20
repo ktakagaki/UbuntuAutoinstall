@@ -1,15 +1,17 @@
-##### Table of Contents  
-
+# TOC #
 * [Installation of Archlinux on Lenovo Ideapad S12](#Installation-of-Archlinux-on-Lenovo-Ideapad-S12)  
  * [Booting the installation medium](#Booting-the-installation-medium)  
  * [Partition layout](#Partition-layout)
  * [Select a mirrorl](#Select-a-mirror)  
  * [Generate a fstab](#Generate-a-fstab)  
- * [LinkLabel](#Chroot-and-configure-the-base-system)  
+ * [Chroot and configure the base system](#Chroot-and-configure-the-base-system)  
 * [LinkLabel](#Title)  
+
 
 <a name="Installation-of-Archlinux-on-Lenovo-Ideapad-S12"/>
 # Installation of Archlinux on Lenovo Ideapad S12 #
+
+Wifi drivers under /usr/lib/firmware on the Live environment must be explicetly installed to provide functionality after rebooting.
 
 <a name="Booting-the-installation-medium"/>
 ## Booting the installation medium ##
@@ -63,22 +65,13 @@
 - CTRL-K to cut and CTRL-U to paste
 - pacstrap -i /mnt base base-devel (Did not use the -i switch, this should cause pacstrap to install every package from the base group without prompting)
 
+
 <a name="Generate-a-fstab"/>
 ### Generate a fstab ###
-
-
-
-
-
-
-
-
-
-
-
-
-**Wifi drivers under /usr/lib/firmware on the Live environment must be explicetly installed to provide functionality after rebooting.**
+- genfstab -U -p /mnt >> /mnt/etc/fstab
+- cat /mnt/etc/fstab
 
 
 <a name="tinymce"/>
 ## Chroot and configure the base system ##
+- arch-chroot /mnt /bin/bash
